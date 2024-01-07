@@ -104,6 +104,7 @@ img.next-image {
   color: #fff;
 }
 
+
 .nx-prose :where(a):not(:where([class~=nx-not-prose] *)) {
   color: var(--text);
   font-weight: 500;
