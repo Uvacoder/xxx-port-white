@@ -4,25 +4,18 @@ title: my stuff
 date: 2024-01-05
 ---
 
-import Image from "next/image";
+import ProfileImage from "./components/ProfileImage";
 import Link from "next/link";
 import ArrowIcon from "./components/icons";
 
-<Image
-  src='/images/tiff.jpg'
-  alt='Photo'
-  width={150}
-  height={100}
-  priority
-  sizes='(max-width: 640px) 100vw, 640px'
-  className='next-image rounded-full'
-/>
+<ProfileImage />
 
  <h2>Find me</h2>
   <ul className="text-neutral-500 dark:text-neutral-400">
     <li>
       <a className="flex items-center gap-2 shrink" href='https://0x8c.org'>
-      Blog <span><ArrowIcon /></span>
+      Blog
+      <ArrowIcon />
       </a>  
     </li>
     <li>
