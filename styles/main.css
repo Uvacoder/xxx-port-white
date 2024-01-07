@@ -121,6 +121,7 @@ img.next-image {
   background-color: var(--link-prose-hover);
 }
 
+
 .nx-prose :where(li):not(:where([class~=nx-not-prose] *)) {
   margin-top: 0;
   margin-bottom: 0;
