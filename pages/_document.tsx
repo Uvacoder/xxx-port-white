@@ -2,10 +2,10 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   const meta = {
-    title: "tiff's blog",
-    description: "Articles focus on React, TS, and Next.",
+    title: "tiff's work",
+    description: "A portfolio of things I've written and worked on.",
     image:
-      "https://res.cloudinary.com/twhiteblog/image/upload/v1685138249/favicon_zvkwc8.svg",
+      "https://res.cloudinary.com/dfahg992n/image/upload/v1704169613/log_zswviq.svg",
   };
 
   return (

@@ -1,9 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
-  --text: #1d1d27;
+  --text: #111827;
   --background-color: #EFEFEF;
   --input-background: #fff;
   --link: #0F9E59;
@@ -12,7 +8,7 @@
   --button-text: #fff;
   --aside: #d7d5ce;
   --link-visited: #af52de;
-  --link-prose-hover: #43B387;
+  --link-prose-hover: #2ECD92;
 }
 
 
@@ -51,14 +47,17 @@ h4,
 h5,
 h6 {
   font-variation-settings: 'wght' 650;
+  color: var(--text)
 }
 
 h1 {
   font-variation-settings: 'wght' 850;
+  color: var(--text)
 }
 
 h2 {
   font-variation-settings: 'wght' 750;
+  color: var(--text)
 }
 
 .nx-prose :where(p):not(:where([class~=nx-not-prose] *)) {
@@ -92,28 +91,37 @@ img.next-image {
   color: #69778c;
 }
 
-.nx-prose :where(li):not(:where([class~=nx-not-prose] *)) {
+.nx-prose :where(li, a):not(:where([class~=nx-not-prose] *)) {
   font-size: 1.1rem;
   font-variation-settings: 'wght' 500;
   line-height: 1.75;
   text-decoration: none;
 }
 
-.nx-prose :where(p, em, strong):not(:where([class~=nx-not-prose] *))::selection {
-  background-color: var(--text);
-  color: #fff;
+.nx-prose :where(ul>li, a):not(:where([class~=nx-not-prose] *))::selection {
+  background-color: var(--link-prose-hover);
+  color: var(--text);
+}
+
+.nx-prose :where(p, h2, em, strong):not(:where([class~=nx-not-prose] *))::selection {
+  background-color: var(--link-prose-hover);
+  color: var(--text);
 }
 
 
-.nx-prose :where(a):not(:where([class~=nx-not-prose] *)) {
+.nx-prose :where(a,ul>li):not(:where([class~=nx-not-prose] *)) {
   color: var(--text);
   font-weight: 500;
-  transition: all .25s ease-in-out;
+  transition: all .25s ease-in;
   text-decoration: none !important;
 }
 
-
-.nx-prose :where(a):not(:where([class~=nx-not-prose], li *)):hover {
+.nx-prose :where(a,ul>li):not(:where([class~=nx-not-prose] *)):hover {
   color: white;
   background-color: var(--link-prose-hover);
+}
+
+.nx-prose :where(li):not(:where([class~=nx-not-prose] *)) {
+  margin-top: 0;
+  margin-bottom: 0;
 }
