@@ -1,10 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: #1d1d27;
+  --background-color: #EFEFEF;
+  --input-background: #fff;
+  --link: #0F9E59;
+  --link-hover: #0bdf79;
+  --light-text: #496495;
+  --button-text: #fff;
+  --aside: #d7d5ce;
+  --link-visited: #af52de;
+  --link-prose-hover: #43B387;
+}
+
+
 @font-face {
   font-family: 'Inter var';
   font-style: normal;
   font-weight: 100 900;
   font-display: block;
   src: url(/fonts/Inter-roman.latin.var.woff2) format('woff2');
-}
+} 
 @font-face {
   font-family: 'Inter var';
   font-style: italic;
@@ -25,6 +43,7 @@ body {
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
 }
+
 b,
 strong,
 h3,
@@ -33,15 +52,23 @@ h5,
 h6 {
   font-variation-settings: 'wght' 650;
 }
+
 h1 {
   font-variation-settings: 'wght' 850;
 }
+
 h2 {
   font-variation-settings: 'wght' 750;
 }
 
+.nx-prose :where(p):not(:where([class~=nx-not-prose] *)) {
+  font-size: 1.1rem;
+  font-variation-settings: 'wght' 500;
+  line-height: 1.75;
+}
+
 @media screen and (min-device-pixel-ratio: 1.5),
-  screen and (min-resolution: 1.5dppx) {
+screen and (min-resolution: 1.5dppx) {
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -56,10 +83,37 @@ img.next-image {
   margin: 0;
 }
 
-.prose a {
-  color: #0074de;
+.shrink {
+  margin-top: -1.5em !important;
+  margin-bottom: -1.5em !important;
 }
 
 .nav-line .nav-link {
   color: #69778c;
+}
+
+.nx-prose :where(li):not(:where([class~=nx-not-prose] *)) {
+  font-size: 1.1rem;
+  font-variation-settings: 'wght' 500;
+  line-height: 1.75;
+  text-decoration: none;
+}
+
+.nx-prose :where(p, em, strong):not(:where([class~=nx-not-prose] *))::selection {
+  background-color: var(--text);
+  color: #fff;
+}
+
+
+.nx-prose :where(a):not(:where([class~=nx-not-prose] *)) {
+  color: var(--text);
+  font-weight: 500;
+  transition: all .25s ease-in-out;
+  text-decoration: none !important;
+}
+
+
+.nx-prose :where(a):not(:where([class~=nx-not-prose], li *)):hover {
+  color: white;
+  background-color: var(--link-prose-hover);
 }
