@@ -10,7 +10,7 @@ const imageStyle = {
 export default function ProfileImage(){
   return(
     <Image
-      src='/images/tiff.jpg'
+      src='/images/tiff.jpeg'
       alt='Photo'
       width={150}
       height={150}
