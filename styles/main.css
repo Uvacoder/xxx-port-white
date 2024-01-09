@@ -95,7 +95,7 @@ img.next-image {
   font-size: 1.1rem;
   font-variation-settings: 'wght' 500;
   line-height: 1.75;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .nx-prose :where(ul>li, a):not(:where([class~=nx-not-prose] *))::selection {
@@ -116,13 +116,23 @@ img.next-image {
   text-decoration: none !important;
 }
 
-.nx-prose :where(a,ul>li):not(:where([class~=nx-not-prose] *)):hover {
+/* .nx-prose :where(a,ul>li):not(:where([class~=nx-not-prose] *)):hover {
   color: white;
   background-color: var(--link-prose-hover);
-}
+} */
 
 
 .nx-prose :where(li):not(:where([class~=nx-not-prose] *)) {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+a[href] {
+  text-decoration: underline;
+  text-decoration-color: var(--link-hover);
+}
+
+a {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, #0bdf79);
+  display: inline;
 }
