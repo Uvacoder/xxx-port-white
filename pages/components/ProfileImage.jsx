@@ -3,7 +3,6 @@ import Image from "next/image";
 
 const imageStyle = {
   clipPath: 'circle(50%)',
-  border: '1px solid #fff',
 }
 
 
@@ -12,8 +11,8 @@ export default function ProfileImage(){
     <Image
       src='/images/tiff.jpeg'
       alt='Photo'
-      width={150}
-      height={150}
+      width={130}
+      height={130}
       style={imageStyle}
     />
   )
