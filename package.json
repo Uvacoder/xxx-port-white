@@ -8,6 +8,7 @@
   "dependencies": {
     "gray-matter": "^4.0.2",
     "next": "14.0.3",
+    "next-goatcounter": "^1.0.5",
     "next-plausible": "^3.12.0",
     "nextra": "^2.13.2",
     "nextra-theme-blog": "^2.13.2",
